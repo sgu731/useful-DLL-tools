@@ -9,4 +9,4 @@ JpgParser updates old games' DLLs (especially Intel® JPEG Library) to use the m
 
 This is great because the newer library fixes the memory leak issues that happened in older DLLs. (TL;DR It makes your game smoother)
 
-It can't replace the library automatically, so you'll have to trace the code yourself. It's easy tho.
+It can't replace the library automatically, so you'll have to trace the code yourself. And hook it using DecodeFromLibJpeg function. It's easy tho.
