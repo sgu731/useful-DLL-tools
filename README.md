@@ -10,3 +10,12 @@ JpgParser updates old games' DLLs (especially Intel® JPEG Library) to use the m
 This is great because the newer library fixes the memory leak issues that happened in older DLLs. (TL;DR It makes your game smoother)
 
 It can't replace the library automatically, so you'll have to trace the code yourself, and hook it using DecodeFromLibJpeg function. It's easy tho.
+
+In order to use Log. Make sure to create console like the following code. 
+```
+	AllocConsole();
+	AttachConsole(GetCurrentProcessId());
+	char charConsoleName[128];
+	sprintf_s(charConsoleName, "Debug Console | PID: %08X (%d)", GetCurrentProcessId(), GetCurrentProcessId());
+	SetConsoleTitleA(charConsoleName);
+```
